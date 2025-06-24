@@ -1,0 +1,1 @@
+# godot-bug-area3d-no-detection-when-enclosed
