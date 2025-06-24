@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="area3d-no-detection-when-enclosed"
-run/main_scene="uid://dmq4neggaxag6"
+run/main_scene="uid://bi8grtf2m6qd2"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

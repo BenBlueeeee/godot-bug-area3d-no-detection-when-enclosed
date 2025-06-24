@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmq4neggaxag6"]
+[gd_scene load_steps=5 format=3 uid="uid://dmq4neggaxag6"]
 
 [ext_resource type="Script" uid="uid://ujwsx217pjdn" path="res://AreaPrinting.gd" id="1_ldo4r"]
 
@@ -10,38 +10,23 @@ data = PackedVector3Array(0, 3, 0, 0, 3, 0, 0, 2.9864, 0.2852, 0, 3, 0, 0.028, 2
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nk8ju"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_pruwx"]
-size = Vector2(50, 50)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tlnag"]
-points = PackedVector3Array(-25, 0, -25, -25, 0, 25, 25, 0, -25, 25, 0, 25)
-
 [node name="BrokenScene" type="Node3D"]
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.69448, 0, 0)
 script = ExtResource("1_ldo4r")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="AreaCollision" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("ConcavePolygonShape3D_433xb")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75216, 5.43009, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-visible = false
+[node name="BodyMesh" type="MeshInstance3D" parent="RigidBody3D"]
 mesh = SubResource("BoxMesh_ldo4r")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="BodyCollision" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("ConvexPolygonShape3D_nk8ju")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.877582, -0.229849, 0.420735, 0, 0.877583, 0.479426, -0.479426, -0.420736, 0.770151, 9.32905, 4.14157, 6.65304)
-
-[node name="Floor" type="StaticBody3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-mesh = SubResource("PlaneMesh_pruwx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-shape = SubResource("ConvexPolygonShape3D_tlnag")
