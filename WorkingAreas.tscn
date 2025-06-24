@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bi8grtf2m6qd2"]
 
-[ext_resource type="Script" uid="uid://bbne5lrk2r214" path="res://WorkingArea3D.cs" id="1_piwcb"]
+[ext_resource type="Script" uid="uid://ujwsx217pjdn" path="res://AreaPrinting.gd" id="1_piwcb"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fos0i"]
 size = Vector2(15, 15)
