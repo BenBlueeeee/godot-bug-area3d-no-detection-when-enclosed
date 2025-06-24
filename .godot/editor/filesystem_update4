@@ -1,0 +1,9 @@
+res://Main.tscn
+res://Area3D.cs
+res://Area3DTempDebug.cs
+res://BodyClass.cs
+res://DebuggingAreas.tscn
+res://BrokenAreas.tscn
+res://NonBrokenAreas.tscn
+res://WorkingAreas.tscn
+res://BrokenArea3D.cs
